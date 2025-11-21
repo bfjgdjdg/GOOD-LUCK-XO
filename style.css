@@ -1,0 +1,400 @@
+/* ======== ตัวแปรสีหลัก (Global Variables) ======== */
+:root {
+    /* นี่คือสี Accent ที่เราเลือก (Electric/Sky Blue) */
+    --accent-color: #00BFFF; 
+    --dark-bg: #121212;      /* สีพื้นหลังหลัก (ดำเกือบสนิท) */
+    --card-bg: #1e1e1e;      /* สีพื้นหลังรอง (เทาเข้ม) */
+    --text-primary: #FFFFFF; /* สีตัวอักษรหลัก (ขาว) */
+    --text-secondary: #b3b3b3;/* สีตัวอักษรรอง (เทา) */
+}
+
+/* ======== Reset & Global Styles ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* ======== 1. Navbar ======== */
+nav {
+    background-color: var(--card-bg);
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color); /* ใช้สี Accent กับโลโก้ */
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--text-primary);
+}
+
+/* ======== 2. Hero Section ======== */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่ง 2 คอลัมน์เท่ากัน */
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+}
+
+/* ตาราง XO ใน Hero (สำหรับโชว์) */
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.hero-grid-cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* ======== 3. Game Modes ======== */
+#game-modes {
+    padding: 4rem 0;
+}
+
+.modes-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mode-card {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    flex-basis: 350px; /* กำหนดความกว้างเริ่มต้น */
+    border: 1px solid #333;
+}
+
+.mode-card h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.mode-card p {
+    color: var(--text-secondary);
+}
+
+/* ======== 4. Leaderboard Preview ======== */
+#leaderboard-preview {
+    padding: 2rem 0;
+}
+
+.leaderboard-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.leaderboard-list li {
+    background-color: var(--card-bg);
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.leaderboard-list li span:first-child {
+    color: var(--text-primary);
+}
+.leaderboard-list li span:last-child {
+    color: var(--accent-color);
+}
+
+/* ======== 5. Footer ======== */
+footer {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+    color: var(--text-secondary);
+}
+
+/* ======== Media Query (สำหรับมือถือ) ======== */
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ */
+        text-align: center;
+    }
+
+    .hero-grid {
+        /* เมื่อเป็นมือถือ อาจจะซ่อนตารางโชว์ไป หรือจัดลำดับใหม่ */
+        order: -1; /* ย้ายไปอยู่ข้างบน */
+        margin-bottom: 2rem;
+        grid-template-columns: repeat(3, 80px); /* ย่อขนาดตาราง */
+    }
+
+    .hero-grid-cell {
+        width: 80px;
+        height: 80px;
+    }
+
+    .modes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ======== โค้ดสำหรับหน้า Game.html (วางต่อท้ายไฟล์) ======== */
+
+/* 1. จัดหน้าเกมให้อยู่ตรงกลาง */
+.game-page {
+    min-height: 80vh; /* ให้เต็มความสูงจอ (ลบ nav/footer) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* จัดกลางแนวตั้ง */
+    align-items: center;    /* จัดกลางแนวนอน */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* 2. สไตล์ของ #game-status */
+#game-status {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    min-height: 3rem; /* จองที่ไว้กันหน้ากระตุกตอนเปลี่ยนข้อความ */
+}
+
+/* 3. สไตล์ของกระดานเกม (สำคัญ) */
+.game-board {
+    display: grid;
+    /* สร้างตาราง 3x3 ขนาดช่องละ 100px */
+    grid-template-columns: repeat(3, 100px); 
+    grid-gap: 10px; /* เว้นช่องว่างระหว่างช่อง */
+    margin-bottom: 2.5rem;
+}
+
+/* 4. สไตล์ของช่อง (Cell) */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--card-bg); /* สีพื้นหลังช่อง */
+    border-radius: 8px;
+    border: 1px solid #333;
+    
+    /* จัด X และ O ให้อยู่กลางช่อง */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 4rem; /* ขนาดตัวอักษร X/O */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #2a2a2a; /* สีตอนเอาเมาส์ชี้ */
+}
+
+/* 5. สไตล์ของตัวอักษร X และ O (จาก Logic JS) */
+.player-x {
+    color: var(--accent-color); /* สีฟ้า (เหมือนธีมหลัก) */
+}
+
+.player-o {
+    color: #FF6B6B; /* สีแดงอมส้ม (สำหรับผู้เล่น O) */
+}
+
+
+/* 6. สไตล์ปุ่ม Restart */
+#restart-button {
+    /* ทำให้ปุ่มนี้หน้าตาเหมือนปุ่ม .cta-button ในหน้าแรก */
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#restart-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+}
+
+
+/* ======== Media Query (สำหรับมือถือ) ======== */
+/* ปรับขนาดกระดานเกมในจอมือถือ */
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(3, 80px); /* ย่อช่อง */
+        gap: 8px;
+    }
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+    #game-status {
+        font-size: 2rem;
+    }
+}
+/* ======== โค้ดสำหรับหน้า Creators.html (วางต่อท้ายไฟล์) ======== */
+
+.creators-page {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 70vh; /* ให้หน้ามีพื้นที่ แม้เนื้อหาน้อย */
+}
+
+.creators-page h2 {
+    color: var(--accent-color);
+}
+
+/* คอนเทนเนอร์ที่จัดวางการ์ด (สำคัญ) */
+.creator-container {
+    display: flex; /* ทำให้การ์ดอยู่ข้างกัน */
+    justify-content: center; /* จัดให้อยู่กลาง */
+    flex-wrap: wrap; /* ถ้าจอเล็ก ให้ปัดลง */
+    gap: 2rem; /* ระยะห่างระหว่างการ์ด */
+    margin-top: 3rem;
+}
+
+/* สไตล์ของการ์ดแต่ละใบ */
+.creator-card {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+    flex-basis: 350px; /* ความกว้างเริ่มต้นของการ์ด */
+    text-align: left;
+}
+
+.creator-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent-color); /* เพิ่มเส้นใต้ชื่อ */
+    padding-bottom: 0.5rem;
+}
+
+.creator-card ul {
+    list-style: none; /* ลบหัวข้อ bullet */
+    padding: 0;
+}
+
+.creator-card li {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.creator-card li strong {
+    color: var(--text-primary);
+    margin-right: 10px;
+    display: inline-block;
+    width: 60px; /* จัดให้ "ชั้น:" และ "เลขที่:" ตรงกัน */
+}

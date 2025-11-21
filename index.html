@@ -1,8 +1,81 @@
-<html>
-	<head>
-		<title>Test My First Web</title>
-	</head>
-	<body>
-		Hellow World!rrrrrrr
-	</body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO Challenge - หน้าแรก</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="container">
+        <a href="index.html" class="logo">X_O</a>
+        <ul>
+            <li><a href="index.html" class="active">หน้าแรก</a></li>
+            <li><a href="game.html">เล่นเกม</a></li>
+            <li><a href="#leaderboard-preview">สถิติ</a></li>
+            
+            <li><a href="creators.html">ผู้สร้าง</a></li> 
+        </ul>
+    </div>
+</nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>The Ultimate<br>XO Challenge</h1>
+                <p>ท้าดวลเกมคลาสสิก ทดสอบตรรกะของคุณ<br>แข่งกับ AI หรือท้าเพื่อนของคุณเลย</p>
+                <a href="game.html" class="cta-button">
+                    ▶ เริ่มเล่นเลย
+                </a>
+            </div>
+            
+            <div class="hero-grid">
+                <div class="hero-grid-cell">X</div>
+                <div class="hero-grid-cell"></div>
+                <div class="hero-grid-cell">O</div>
+                <div class="hero-grid-cell"></div>
+                <div class="hero-grid-cell">X</div>
+                <div class="hero-grid-cell"></div>
+                <div class="hero-grid-cell">O</div>
+                <div class="hero-grid-cell"></div>
+                <div class="hero-grid-cell">X</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="game-modes" class="container">
+            <h2>โหมดการเล่น</h2>
+            <div class="modes-container">
+                <div class="mode-card">
+                    <h3>🤖 เล่นกับ AI</h3>
+                    <p>ทดสอบฝีมือกับคอมพิวเตอร์<br>(เร็วๆ นี้)</p>
+                </div>
+                <div class="mode-card">
+                    <h3>👥 เล่นกับเพื่อน</h3>
+                    <p>สลับกันเล่นกับเพื่อน<br>(บนเครื่องเดียวกัน)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard-preview" class="container">
+            <h2>🏆 Top Players</h2>
+            <ol class="leaderboard-list">
+                <li><span>1. Player_A</span> <span>20 Wins</span></li>
+                <li><span>2. CPU_Master</span> <span>18 Wins</span></li>
+                <li><span>3. NooB_Slayer</span> <span>15 Wins</span></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - สร้างโดย [ชื่อของคุณ] ด้วย HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+</body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO Challenge - เล่นเกม!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="container">
+        <a href="index.html" class="logo">X_O</a>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="game.html" class="active">เล่นเกม</a></li>
+            <li><a href="index.html#leaderboard-preview">สถิติ</a></li>
+            
+            <li><a href="creators.html">ผู้สร้าง</a></li> 
+        </ul>
+    </div>
+</nav>
+
+    <main class="container game-page">
+        
+        <h2 id="game-status">ตาของ X</h2>
+
+        <div class="game-board">
+            <div class="cell" data-cell-index="0"></div>
+            <div class="cell" data-cell-index="1"></div>
+            <div class="cell" data-cell-index="2"></div>
+            <div class="cell" data-cell-index="3"></div>
+            <div class="cell" data-cell-index="4"></div>
+            <div class="cell" data-cell-index="5"></div>
+            <div class="cell" data-cell-index="6"></div>
+            <div class="cell" data-cell-index="7"></div>
+            <div class="cell" data-cell-index="8"></div>
+        </div>
+
+        <button id="restart-button">เริ่มเกมใหม่</button>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - สร้างโดย [cloud and dolphin] ด้วย HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="game.js" defer></script>
+
+</body>
+</html>
